@@ -1,0 +1,23 @@
+{
+  "name": "Screwd",
+  "version": "1.0",
+  "manifest_version": 2,
+
+  "description": "Chrome extensions with AngularJS",
+  "icons": {
+    "128": "terry.png"
+  },
+  "browser_action": {
+    "default_icon": "terry.png",
+    "default_popup": "popup.html",
+    "default_title": "Screwd"
+  },
+  "content_scripts": [ {
+    "js": [ "bower_components/jquery/dist/jquery.min.js", "js/content.js" ],
+    "matches": [ "*://*/*" ],
+    "run_at": "document_start"
+  } ],
+  "minimum_chrome_version": "18",
+  "permissions": [ "http://*/*", "https://*/*", "unlimitedStorage", "contextMenus", "cookies", "tabs", "notifications" ]
+
+}
